@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"><test verbose="2" name="G:/BitBucket/praca_inzynierska/SELENIUM">
+    <classes>
+        <class name="com.github.tests.ddt.DownloadTest">
+        <methods>
+            <include name="testDownloadPdfFile"/>
+        </methods>
+        </class>
+        <class name="com.github.tests.ddt.FilteringTest">
+        <methods>
+            <include name="testFiltering"/>
+        </methods>
+    </class>
+        <class name="com.github.tests.ddt.LoginTest">
+            <methods>
+                <include name="testLoginWithCorrectData"/>
+            </methods>
+        </class>
+        <class name="com.github.tests.ddt.MouveHoverTest">
+            <methods>
+                <include name="testExpandProductItemList"/>
+                <include name="testExpandExploreItemList"/>
+                <include name="testExpandPricingItemList"/>
+            </methods>
+        </class>
+        <class name="com.github.tests.ddt.SearchingTest">
+            <methods>
+                <include name="testSearching"/>
+            </methods>
+        </class>
+        <class name="com.github.tests.ddt.SortingTest">
+            <methods>
+                <include name="testSorting"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>

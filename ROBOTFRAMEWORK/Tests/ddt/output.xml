@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220613 15:52:45.397" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="G:\BitBucket\praca_inzynierska\ROBOTFRAMEWORK\Tests\ddt\Login.robot">
+<kw name="Suite setup" library="Common" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220613 15:52:46.512" endtime="20220613 15:52:46.513"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220613 15:52:46.513" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220613 15:52:46.513" endtime="20220613 15:52:47.911"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220613 15:52:47.911" endtime="20220613 15:52:48.046"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:46.512" endtime="20220613 15:52:48.046"/>
+</kw>
+<test id="s1-t1" name="Login with proper credentials Sakurzasty VmSv8[].7BJ\/52W4{WsZl%;" line="13">
+<kw name="Valid Login Scenarios">
+<arg>Sakurzasty</arg>
+<arg>VmSv8[].7BJ\\/52W4{WsZl%;</arg>
+<kw name="Open Welcome Page" library="WelcomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220613 15:52:48.051" level="INFO">Opening url 'https://github.com/'</msg>
+<status status="PASS" starttime="20220613 15:52:48.051" endtime="20220613 15:52:49.413"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:48.050" endtime="20220613 15:52:49.413"/>
+</kw>
+<kw name="Check Title Page" library="WelcomePage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${WelcomePageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:49.421" level="INFO">Page title is 'GitHub: Where the world builds software · GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:49.414" endtime="20220613 15:52:49.421"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:49.414" endtime="20220613 15:52:49.421"/>
+</kw>
+<kw name="Click Sign In Button" library="WelcomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:49.422" level="INFO">Clicking element 'link:Sign in'.</msg>
+<status status="PASS" starttime="20220613 15:52:49.421" endtime="20220613 15:52:50.296"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:49.421" endtime="20220613 15:52:50.297"/>
+</kw>
+<kw name="Check Title Page" library="LoginPage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${LoginPageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:50.302" level="INFO">Page title is 'Sign in to GitHub · GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:50.297" endtime="20220613 15:52:50.302"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:50.297" endtime="20220613 15:52:50.302"/>
+</kw>
+<kw name="Input Username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UserEmailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:50.303" level="INFO">Typing text 'Sakurzasty' into text field 'id:login_field'.</msg>
+<status status="PASS" starttime="20220613 15:52:50.303" endtime="20220613 15:52:50.354"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:50.302" endtime="20220613 15:52:50.355"/>
+</kw>
+<kw name="Input Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UserPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:50.355" level="INFO">Typing text 'VmSv8[].7BJ\/52W4{WsZl%;' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220613 15:52:50.355" endtime="20220613 15:52:50.433"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:50.355" endtime="20220613 15:52:50.433"/>
+</kw>
+<kw name="Click Submit Button" library="LoginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SubmitButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:50.433" level="INFO">Clicking button 'name:commit'.</msg>
+<status status="PASS" starttime="20220613 15:52:50.433" endtime="20220613 15:52:51.644"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:50.433" endtime="20220613 15:52:51.644"/>
+</kw>
+<kw name="Check Title Page" library="HomePage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HomePageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:51.648" level="INFO">Page title is 'GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:51.645" endtime="20220613 15:52:51.648"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:51.645" endtime="20220613 15:52:51.649"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220613 15:52:51.649" endtime="20220613 15:52:51.703"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:48.049" endtime="20220613 15:52:51.703"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:48.046" endtime="20220613 15:52:51.703"/>
+</test>
+<test id="s1-t2" name="Login with proper credentials s14345@pjwstk.edu.pl A!Zx78asdf_" line="13">
+<kw name="Valid Login Scenarios">
+<arg>s14345@pjwstk.edu.pl</arg>
+<arg>A!Zx78asdf_</arg>
+<kw name="Open Welcome Page" library="WelcomePage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220613 15:52:51.707" level="INFO">Opening url 'https://github.com/'</msg>
+<status status="PASS" starttime="20220613 15:52:51.707" endtime="20220613 15:52:52.011"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:51.706" endtime="20220613 15:52:52.012"/>
+</kw>
+<kw name="Check Title Page" library="WelcomePage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${WelcomePageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:52.194" level="INFO">Page title is 'GitHub: Where the world builds software · GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.012" endtime="20220613 15:52:52.194"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.012" endtime="20220613 15:52:52.194"/>
+</kw>
+<kw name="Click Sign In Button" library="WelcomePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:52.195" level="INFO">Clicking element 'link:Sign in'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.195" endtime="20220613 15:52:52.508"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.195" endtime="20220613 15:52:52.508"/>
+</kw>
+<kw name="Check Title Page" library="LoginPage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${LoginPageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:52.511" level="INFO">Page title is 'Sign in to GitHub · GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.508" endtime="20220613 15:52:52.511"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.508" endtime="20220613 15:52:52.511"/>
+</kw>
+<kw name="Input Username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UserEmailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:52.512" level="INFO">Typing text 's14345@pjwstk.edu.pl' into text field 'id:login_field'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.512" endtime="20220613 15:52:52.561"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.511" endtime="20220613 15:52:52.562"/>
+</kw>
+<kw name="Input Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UserPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:52.562" level="INFO">Typing text 'A!Zx78asdf_' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.562" endtime="20220613 15:52:52.623"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.562" endtime="20220613 15:52:52.623"/>
+</kw>
+<kw name="Click Submit Button" library="LoginPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SubmitButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220613 15:52:52.624" level="INFO">Clicking button 'name:commit'.</msg>
+<status status="PASS" starttime="20220613 15:52:52.623" endtime="20220613 15:52:55.616"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:52.623" endtime="20220613 15:52:55.616"/>
+</kw>
+<kw name="Check Title Page" library="HomePage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HomePageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220613 15:52:55.621" level="INFO">Page title is 'GitHub'.</msg>
+<status status="PASS" starttime="20220613 15:52:55.616" endtime="20220613 15:52:55.622"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:55.616" endtime="20220613 15:52:55.622"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220613 15:52:55.622" endtime="20220613 15:52:55.680"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:51.706" endtime="20220613 15:52:55.680"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:51.704" endtime="20220613 15:52:55.680"/>
+</test>
+<kw name="Suite teardown" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220613 15:52:55.682" endtime="20220613 15:52:57.865"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:55.681" endtime="20220613 15:52:57.865"/>
+</kw>
+<status status="PASS" starttime="20220613 15:52:45.399" endtime="20220613 15:52:57.865"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
